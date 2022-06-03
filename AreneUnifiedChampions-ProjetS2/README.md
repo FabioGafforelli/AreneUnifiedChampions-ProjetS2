@@ -1,29 +1,7 @@
-# AreneUnifiedChampions-ProjetS2 
+# Projet basique Vue/router/Vite/Tailwind
 
-This template should help get you started developing with Vue 3 in Vite.
-
-## Recommended IDE Setup
-
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
+* [Installation de Vue avec Vite comme "build tool"](https://vuejs.org/guide/quick-start.html#with-build-tools)
+* [Vue router](https://router.vuejs.org/guide/)
+* [Tailwind](https://tailwindcss.com/docs/guides/vite)
+    * avec [plugin pour Prettier](https://github.com/tailwindlabs/prettier-plugin-tailwindcss#readme) pour trier les classes TW automatiquement.
+* [HeroIcons pour Vue 3](https://github.com/tailwindlabs/heroicons#vue)
