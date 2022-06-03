@@ -23,14 +23,23 @@ export default {
 </div>
                 </div>
                 
-<div class="grid grid-flow-row-dense grid-cols-[repeat(auto-fit,minmax(350px,1fr))] gap-5  ">
-<section>
-    <div class="grid grid-cols-2">
+<section class="flex grid-cols-3">
         <SectionJoueur />
-    </div>
-</section>
+       <h1 class="text-black text-5xl px-4 font-rajdhani">Vous êtes un</h1><h1 class="text-orange-400 text-5xl font-rajdhani"> Joueur ? </h1>
 
+</section>
+       <p class="text-black text-3xl font-rajdhani font-bold bottom-5">Vous êtes un joueur, mais vous n’avez pas d’équipe pour la Grosse ligue ?</p>
+       <p class="text-black text-2xl font-rajdhani font-light">Pas de soucis, vous pouvez postuler en créant votre profil pour rejoindre une équipe.</p>
+       <br>
+       <p class="text-black text-2xl font-rajdhani font-light">Dans ce profil vous pouvez renseignez toute votre expérience sur le jeu “League of Legend”
+(votre rang, votre rôle...).</p>
+<br>
+       <p class="text-black text-2xl font-rajdhani font-normal">Vous pouvez vous rendre dans la base de donées mise à votre dispotition, Afin de trouver l’équipe qui vous correspond.</p>
+<div class="grid grid-cols-2">
+    <button><img src="/public/images/BoutonProfil.png" alt=""></button>
+    <button><img src="/public/images/Boutonchercherequipe.png" alt=""></button>
 </div>
+
 </div>
 <footer1 />
 </template>
