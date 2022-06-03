@@ -38,16 +38,16 @@ export default {
       >
       <ul id="menu" v-if="menuOuvert" class="lg:hidden bg-white w-full text- text-xl font-timmana  py-4 text-center" >
         <li class="my-3">
-          <RouterLink class="my-6 lg:px-4 xl:pt-2 xl:rounded-sm font-algerian text-black  " to="/programmation">Histoire</RouterLink>
+          <RouterLink class="my-6 lg:px-4 xl:pt-2 xl:rounded-sm font-algerian text-black  " to="/histoire">Histoire</RouterLink>
         </li>
         <li class="my-3">
-          <RouterLink class="my-6 lg:px-4 xl:pt-2 xl:rounded-sm font-algerian text-black " to="/artistes">Réglement</RouterLink>
+          <RouterLink class="my-6 lg:px-4 xl:pt-2 xl:rounded-sm font-algerian text-black " to="/reglement">Réglement</RouterLink>
         </li>
         <li class="my-3">
-          <RouterLink class="my-6 lg:px-4 xl:pt-2 xl:rounded-sm text-black font-algerian " to="/festival">Jeux/Tournoi</RouterLink>
+          <RouterLink class="my-6 lg:px-4 xl:pt-2 xl:rounded-sm text-black font-algerian " to="/jeux">Jeux/Tournoi</RouterLink>
         </li>
         <li class="my-3">
-          <RouterLink class="my-6 lg:px-4 xl:pt-2 xl:rounded-sm font-algerian text-black " to="/billetterie">S'inscrire</RouterLink>
+          <RouterLink class="my-6 lg:px-4 xl:pt-2 xl:rounded-sm font-algerian text-black " to="/inscription">S'inscrire</RouterLink>
         </li>
         <li class="my-3">
           <RouterLink class="my-6 lg:px-4 xl:pt-2 xl:rounded-sm font-algerian text-black" to="/contact">Contact</RouterLink>
@@ -56,16 +56,16 @@ export default {
       </Transition>
       <ul class="lg:flex  gap-6 lg:items-center text-white text-xl font-algerian mx-6 py-4 hidden" >
         <li class="my-3">
-          <RouterLink class="my-6 lg:px-2 xl:pt-2 xl:rounded-sm font-algerian text-white" to="/programmation">Histoire</RouterLink>
+          <RouterLink class="my-6 lg:px-2 xl:pt-2 xl:rounded-sm font-museomoderno text-white" to="/histoire">Histoire</RouterLink>
         </li>
         <li class="my-3">
-          <RouterLink class="my-6 lg:px-2 xl:pt-2 xl:rounded-sm font-algerian text-white " to="artistes">Réglement</RouterLink>
+          <RouterLink class="my-6 lg:px-2 xl:pt-2 xl:rounded-sm font-algerian text-white " to="reglement">Réglement</RouterLink>
         </li>
         <li class="my-3">
-          <RouterLink class="my-6 lg:px-2 xl:pt-2 xl:rounded-sm font-algerian text-white " to="/festival">Jeux/Tournoi</RouterLink>
+          <RouterLink class="my-6 lg:px-2 xl:pt-2 xl:rounded-sm font-algerian text-white " to="/jeux">Jeux/Tournoi</RouterLink>
         </li>
         <li class="my-3">
-          <RouterLink class="my-6 lg:px-2 xl:pt-2 xl:rounded-sm font-algerian text-white " to="/billetterie">inscrire</RouterLink>
+          <RouterLink class="my-6 lg:px-2 xl:pt-2 xl:rounded-sm font-algerian text-white " to="/inscription">S'inscrire</RouterLink>
         </li>
         <li class="my-3">
           <RouterLink class="my-6 lg:px-2 xl:pt-2 xl:rounded-sm font-algerian text-white " to="/contact">Contact</RouterLink>
