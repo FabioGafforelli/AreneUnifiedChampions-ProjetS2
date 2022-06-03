@@ -35,7 +35,8 @@ export default {
 (votre rang, votre rôle...).</p>
 <br>
        <p class="text-black text-2xl font-rajdhani font-normal">Vous pouvez vous rendre dans la base de donées mise à votre dispotition, Afin de trouver l’équipe qui vous correspond.</p>
-<div class="grid grid-cols-2">
+<div class="grid grid-cols-3">
+    <img src="/public/images/CardsJoueurs.png" alt="">
     <button><img src="/public/images/BoutonProfil.png" alt=""></button>
     <button><img src="/public/images/Boutonchercherequipe.png" alt=""></button>
 </div>
