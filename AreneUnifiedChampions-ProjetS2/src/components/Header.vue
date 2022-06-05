@@ -15,12 +15,12 @@ export default {
 </script>
 
 <template>
-<header class="bg-gradient-to-bl from-indigo-500 to-blue-700 top-0 drop-shadow-lg z-10 ">
+<header class=" bg-gradient-to-bl from-indigo-500 to-blue-700 top-0 drop-shadow-lg z-10 ">
     <a href="#content" class="sr-only focus:not-sr-only text-lg text-white"> Passez au contenu </a>
     <nav class=" lg:flex lg:justify-between items-center">
       <div class="flex justify-between items-center">
        <RouterLink to="/"><Logo class="w-42 h-42 p-4"/></RouterLink>
-      <span class="text-3xl cursor-pointer lg:hidden block w-8 h-8 mx-4  ">
+      <span class="text-3xl cursor-pointer lg:hidden block w-8 h-8 mr-25  ">
         <MenuIcon class=" text-white"  aria-controls="menu"
         :aria-expanded="menuOuvert"
         @click="menuOuvert = !menuOuvert">
@@ -36,7 +36,7 @@ export default {
         leaveFrom="transform  translate-x-0 opacity-100"
         leaveTo="transform translate-x-full opacity-0"
       >
-      <ul id="menu" v-if="menuOuvert" class="lg:hidden bg-white w-full text- text-xl font-timmana  py-4 text-center" >
+      <ul id="menu" v-if="menuOuvert" class="lg:hidden bg-white w-full  text-xl font-museomoderno  py-4 text-center" >
         <li class="my-3">
           <RouterLink class="my-6 lg:px-4 xl:pt-2 xl:rounded-sm font-algerian text-black  " to="/histoire">Histoire</RouterLink>
         </li>
