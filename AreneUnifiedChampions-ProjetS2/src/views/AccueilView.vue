@@ -9,8 +9,8 @@ export default {
 </script>
 
 <template class="bg-indigo-25">
-    <header1 />
-    <div class="bg-indigo-25 ">
+    <div>
+        <header1 />
     <div class="grid grid-flow-row-dense grid-cols-[repeat(auto-fit,minmax(350px,1fr))] gap-5  ">
 <div>
     <img src="/public/images/boutonjoueur.png" alt="Scroller jusqu'à la page description joueur en cliquant sur cette image">
@@ -51,7 +51,7 @@ base de données en fonction de vos envies</p></div>
 </div>
 <br>
 <div class="flex grid-cols-3">
-        <img class="w-12 h-12" src="/public/images/SectionEquipe.png" alt="">
+        <img class="w-36 h-36" src="/public/images/SectionEquipe.png" alt="">
      <div class=""> <h1 class="text-black text-5xl px-4 font-rajdhani">Vous êtes une</h1><h1 class="text-pink-400 text-5xl font-rajdhani"> Equipe ? </h1>
        <p class="text-black flex pl-5 pt-5 pb-10 sm:text-2xl lg:text-2xl xl:text-3xl font-rajdhani font-bold bottom-5">Vous souhaitez inscrire votre équipe pour la Grosse ligue ? </p>
        <p class="text-black flex pl-5 pt-5 pb-10 sm:text-2xl lg:text-2xl xl:text-3xl font-rajdhani font-light">Vous pouvez vous inscrire  en créant votre équipe pour participer au tournoi de qualification.</p>
