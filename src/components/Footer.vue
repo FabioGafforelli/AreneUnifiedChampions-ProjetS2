@@ -15,7 +15,7 @@ export default {
 <footer class="bg-gradient-to-bl from-indigo-500 to-blue-700 pt-10 sm:mt-10">
     <div>
         <RouterLink to="/">
-        <Logo class=" w-12 ml-6" /></RouterLink>
+        <Logo class=" w-24 h-24 ml-6" /></RouterLink>
     </div>
         <div class="max-w-6xl m-auto text-white flex flex-wrap justify-left">
 
