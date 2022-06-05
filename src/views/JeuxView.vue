@@ -6,47 +6,63 @@
         <RouterLink to="/ajouterjeux"> <div class=" bg-blue-700 text-white font-museomoderno px-10 py-4 rounded-2xl hover:bg-blue-900"><p>Ajouter un jeux</p></div> </RouterLink>
       </div>
       <div class="block overflow-x-auto w-full">
-            <p class="font-lato text-xl font-medium text-center mb-5">Tapez pour rechercher le nom de l'artiste à modifier</p>
-          <div class="flex flex-row justify-center gap-3">
-              <input type="search" class="w-full rounded-xl h-10 text-black px-4 bg-violet-50 placeholder:text-violet-900 border-violet-900" placeholder="Recherche par nom" v-model="query">
-          </div>
-
-          <table class="w-full">
-            <thead>
-                <tr class="border-b-2">
-                    <th class="w-64 p-3 font-lato ">Image</th>
-                    <th class="w-1/5 font-lato ">Nom</th>
-                    <th class="w-1/5 font-lato hidden sm:flex mt-3 ">Description</th>
-                
-                </tr>
-            </thead>
-            <tbody>
-                <tr v-for="artistes in searchByName" :key="artistes.id" class="mt-2">
-                    <td class=""><img :src="artistes.imageartiste" :alt="jeux.nom" class="w-full h-auto lg:w-1/2 lg:h-1/2  mb-10"></td>
-                    <td class="text-center font-lato ">{{jeux.nom}}</td>
-                    <td class="text-center font-lato hidden sm:flex lg:mt-12 sm:mt-[105px] ">{{jeux.description}}</td>
-
-                    <td class="text-center lg:w-1/4">
-                        
-
-                        <RouterLink :to="{ name:'Supprimer', params: { id: jeux.id }}">
-                         <div class=" p-7 bg-violet-700 text-white font-lato px-4 py-3 rounded-2xl mb-1 effet-shadowblanc hover:bg-violet-900 ">
-                            Supprimer
-                        </div>
-                        </RouterLink>
-
-                        <RouterLink :to="{ name:'Modifier', params: { id: jeux.id }}">
-                            <div class="bg-violet-400 text-white font-lato px-4 py-3 rounded-2xl effet-shadowblanc hover:bg-violet-900">
-                                Modifier
+ <div class="">
+            <table class="">
+                <thead>
+                    <tr>                      
+                        <th scope="col">
+                          <div class="text-black dark:text-white">Liste des artistes actuels</div>                          
+                          <span class="">
+                            <div class="ml-80" >
+                                <div class="text-black dark:text-white">
+                                  <span class="">Filtrage</span>
+                                </div>
+                                <input type="text" class="bg-red-800 text-white" v-model='filter'/>
+                                <button class="" type="button" title="Filtrage">
+                                  <Rechercher />
+                                </button>
+                              </div>
+                          </span>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr v-for='jeux in listejeuxSynchro' :key='jeux.id'>
+                        <td>
+                          <form>
+                            <div class="text-black dark:text-white">
+                              <div class="">
+                                <span class="">Nom</span>
+                              </div>
+                              <input type="text" class="bg-red-800 text-white" v-model="jeux.nom" required />
+                              <button class="fill-black" type="button" @click.prevent="updatejeux(jeux)" title="Modification">
+                               <RouterLink :to="{ name:'ModifierView', params:{ id:jeux.id}}">
+                               <Modification/>
+                               </RouterLink>
+                              </button>
+                              <RouterLink :to="{ name:'DeleteView', params:{ id:jeux.id}}">
+                                <Supprimer />
+                              </RouterLink>
                             </div>
-                        </RouterLink>
+                          </form>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+ <div class="grid grid-cols-3">
+        <div v-for="jeux in listejeuxSynchro" :key="jeux.id">
+            <card
+                :nom="jeux.nom"
+                :description="jeux.description"
+                :logojeux="jeux.logojeux"
+                :id="jeux.id" />
+        </div>
 
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-      </div>
-  </div>
+</div>
+    <Footer1 />
+    </div>
   <Footer1 />
 </template>
 
