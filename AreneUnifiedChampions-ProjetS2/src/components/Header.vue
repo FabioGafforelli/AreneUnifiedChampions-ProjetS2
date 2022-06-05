@@ -15,7 +15,7 @@ export default {
 </script>
 
 <template>
-<header class=" bg-gradient-to-bl from-indigo-500 to-blue-700 top-0 drop-shadow-lg z-10 ">
+<header class="bg-gradient-to-bl from-indigo-500 to-blue-700 top-0 drop-shadow-lg z-10 ">
     <a href="#content" class="sr-only focus:not-sr-only text-lg text-white"> Passez au contenu </a>
     <nav class=" lg:flex lg:justify-between items-center">
       <div class="flex justify-between items-center">
