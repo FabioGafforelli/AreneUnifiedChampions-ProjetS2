@@ -72,48 +72,111 @@ import Footer1 from '../components/Footer.vue';
 import Header1 from '../components/Header.vue';
 
 
+
 export default {
-    data() {
-        return {
-            listArt: [],
-            query: "",
-        };
-    },
-    mounted() {
-        this.getjeux();
-    },
-    methods: {
-        async getjeux() {
-            const firestore = getFirestore();
-            const dbjeux = collection(firestore, "jeux");
-            const q = query(dbjeux, orderBy("jeux", "asc"));
-            await onSnapshot(q, (snapshot) => {
-                this.listjeux = snapshot.docs.map(doc => ({
-                    id: doc.id,
-                    ...doc.data()
-                }));
-                this.listjeux.forEach(function (jeux) {
-                    const storage = getStorage();
-                    const spaceRef = ref(storage, "logojeux/" + jeux.logojeux);
-                    getDownloadURL(spaceRef)
-                        .then((url) => {
-                        jeux.logojeux = url;
+    data(){ // Données de la vue
+            return{                
+                nom:null, // Pour la création d'un nouveau pays
+                listejeuxSynchro:[], // Liste des pays synchronisée - collection pays de Firebase
+                filter:''
+            }
+        },
+        computed:{
+            orderByName:function(){
+                return this.listejeuxSynchro.sort(function(a, b){
+                  if(a.Nom < b.Nom)  return -1;
+                  if(a.Nom > b.Nom)  return 1;
+                  return 0
+                })
+            },
+            filterByName:function(){
+                if(this.filter.length > 0){
+                    let filter = this.filter.toLowerCase();
+                    return this.orderByName.filter(function(Artistes){
+                        return jeux.nom.toLowerCase().includes(filter);
                     })
-                        .catch((error) => {
-                        console.log("erreur download url", error);
-                    });
-                });
-            });
+                }else{
+                    return this.orderByName;
+                }
+            }
         },
-    },
-    computed: {
-        searchByName() {
-            let query = this.query;
-            return this.listArt.filter(function (jeux) {
-                return jeux.nom.includes(query);
-            });
+        mounted(){ // Montage de la vue
+            // Appel de la liste des pays synchronisée
+            this.getjeuxSynchro();
         },
-    },
+        methods: {
+              async getjeuxSynchro(){
+                // Obtenir Firestore
+                const firestore = getFirestore();
+                // Base de données (collection)  document pays
+                const dbArtistes= collection(firestore, "jeux");
+                // Liste des pays synchronisée
+                const query = await onSnapshot(dbjeux, (snapshot) =>{
+                    //  Récupération des résultats dans listePaysSynchro
+                    // On utilse map pour récupérer l'intégralité des données renvoyées
+                    // on identifie clairement le id du document
+                    // les rest parameters permet de préciser la récupération de toute la partie data
+                    this.listejeuxSynchro = snapshot.docs.map(doc => ({id:doc.id, ...doc.data()}));
+                    this.listejeuxSynchro.forEach(function(jeux){
+                      const storage = getStorage();
+                      const spaceRef = ref(storage, 'logojeux/'+jeux.logojeux);
+                      getDownloadURL(spaceRef)
+                      .then((url) => {
+                        logojeux.photo = url;
+                      })
+                      .catch((error) =>{
+                        console.log('erreur downloadUrl', error)
+                      })
+                    }) 
+                })
+            },
+            async createArtistes(){
+                // Obtenir Firestore
+                const firestore = getFirestore();
+                // Base de données (collection)  document pays
+                const dbArtistes= collection(firestore, "jeux");
+                // On passe en paramètre format json
+                // Les champs à mettre à jour
+                // Sauf le id qui est créé automatiquement
+                const docRef = await addDoc(dbjeux,{
+                    nom: this.nom,
+                    description: this.description,
+                    logojeux: this.logojeux
+                })
+                console.log('document créé avec le id : ', docRef.id);
+             },
+            async updateArtistes(jeux){
+                // Obtenir Firestore
+                const firestore = getFirestore();
+                // Base de données (collection)  document pays
+                // Reference du pays à modifier
+                const docRef = doc(firestore, "jeux", jeux.id);
+                // On passe en paramètre format json
+                // Les champs à mettre à jour
+                await updateDoc(docRef, {
+                    nom: jeux.Nom
+                }) 
+             },
+            async deletejeux(jeux){
+                // Obtenir Firestore
+                const firestore = getFirestore();
+                // Base de données (collection)  document pays
+                // Reference du pays à supprimer
+                const docRef = doc(firestore, "jeux", jeux.id);
+                // Suppression du pays référencé
+                await deleteDoc(docRef);
+             },
+async createArtistes(){
+            const storage = getStorage();
+            const refStorage = ref(storage, 'logojeux/'+this.jeux.logojeux);
+            await uploadString(refStorage, this.imageData, 'data_url').then((snapshot) => {
+                console.log('Uploaded a base64 string');
+                const db = getFirestore();
+                const docRef = addDoc(collection(db, 'jeux'), this.jeux);
+            });
+            this.$router.push('/jeux')
+        },
+},
     components: { Footer1, Header1 }
 }
 </script>
