@@ -16,26 +16,26 @@
                 <tr class="border-b-2">
                     <th class="w-64 p-3 font-lato ">Image</th>
                     <th class="w-1/5 font-lato ">Nom</th>
-                    <th class="w-1/5 font-lato hidden sm:flex mt-3 ">Chanson connue</th>
+                    <th class="w-1/5 font-lato hidden sm:flex mt-3 ">Description</th>
                 
                 </tr>
             </thead>
             <tbody>
                 <tr v-for="artistes in searchByName" :key="artistes.id" class="mt-2">
-                    <td class=""><img :src="artistes.imageartiste" :alt="artistes.artiste" class="w-full h-auto lg:w-1/2 lg:h-1/2  mb-10"></td>
-                    <td class="text-center font-lato ">{{artistes.artiste}}</td>
-                    <td class="text-center font-lato hidden sm:flex lg:mt-12 sm:mt-[105px] ">{{artistes.chansonconnue}}</td>
+                    <td class=""><img :src="artistes.imageartiste" :alt="jeux.nom" class="w-full h-auto lg:w-1/2 lg:h-1/2  mb-10"></td>
+                    <td class="text-center font-lato ">{{jeux.nom}}</td>
+                    <td class="text-center font-lato hidden sm:flex lg:mt-12 sm:mt-[105px] ">{{jeux.description}}</td>
 
                     <td class="text-center lg:w-1/4">
                         
 
-                        <RouterLink :to="{ name:'deleteartiste', params: { id: artistes.id }}">
+                        <RouterLink :to="{ name:'Supprimer', params: { id: jeux.id }}">
                          <div class=" p-7 bg-violet-700 text-white font-lato px-4 py-3 rounded-2xl mb-1 effet-shadowblanc hover:bg-violet-900 ">
                             Supprimer
                         </div>
                         </RouterLink>
 
-                        <RouterLink :to="{ name:'modifartiste', params: { id: artistes.id }}">
+                        <RouterLink :to="{ name:'Modifier', params: { id: jeux.id }}">
                             <div class="bg-violet-400 text-white font-lato px-4 py-3 rounded-2xl effet-shadowblanc hover:bg-violet-900">
                                 Modifier
                             </div>
@@ -80,24 +80,24 @@ export default {
         };
     },
     mounted() {
-        this.getArtiste();
+        this.getjeux();
     },
     methods: {
-        async getArtiste() {
+        async getjeux() {
             const firestore = getFirestore();
-            const dbArt = collection(firestore, "artistes");
-            const q = query(dbArt, orderBy("artiste", "asc"));
+            const dbArt = collection(firestore, "jeux");
+            const q = query(dbArt, orderBy("jeux", "asc"));
             await onSnapshot(q, (snapshot) => {
                 this.listArt = snapshot.docs.map(doc => ({
                     id: doc.id,
                     ...doc.data()
                 }));
-                this.listArt.forEach(function (artistes) {
+                this.listArt.forEach(function (jeux) {
                     const storage = getStorage();
-                    const spaceRef = ref(storage, "imageartiste/" + artistes.imageartiste);
+                    const spaceRef = ref(storage, "logojeux/" + jeux.logojeux);
                     getDownloadURL(spaceRef)
                         .then((url) => {
-                        artistes.imageartiste = url;
+                        jeux.logojeux = url;
                     })
                         .catch((error) => {
                         console.log("erreur download url", error);
@@ -109,8 +109,8 @@ export default {
     computed: {
         searchByName() {
             let query = this.query;
-            return this.listArt.filter(function (artistes) {
-                return artistes.artiste.includes(query);
+            return this.listArt.filter(function (jeux) {
+                return jeux.nom.includes(query);
             });
         },
     },
