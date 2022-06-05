@@ -85,14 +85,14 @@ export default {
     methods: {
         async getjeux() {
             const firestore = getFirestore();
-            const dbArt = collection(firestore, "jeux");
-            const q = query(dbArt, orderBy("jeux", "asc"));
+            const dbjeux = collection(firestore, "jeux");
+            const q = query(dbjeux, orderBy("jeux", "asc"));
             await onSnapshot(q, (snapshot) => {
-                this.listArt = snapshot.docs.map(doc => ({
+                this.listjeux = snapshot.docs.map(doc => ({
                     id: doc.id,
                     ...doc.data()
                 }));
-                this.listArt.forEach(function (jeux) {
+                this.listjeux.forEach(function (jeux) {
                     const storage = getStorage();
                     const spaceRef = ref(storage, "logojeux/" + jeux.logojeux);
                     getDownloadURL(spaceRef)
