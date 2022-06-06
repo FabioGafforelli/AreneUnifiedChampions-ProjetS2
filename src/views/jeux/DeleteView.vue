@@ -1,5 +1,5 @@
 <template>
-  <h1 class="font-rajdhani mb-10 mt-20 border-b-2 text-center text-2xl">Suppression d'un jeu</h1>
+  <h1 class="font-rajdhani mb-10 mt-20 border-b-2 text-center text-2xl">Suppression le jeu</h1>
 
   <div class="relative mt-2 flex flex-col gap-20 px-5">
     <div class="">

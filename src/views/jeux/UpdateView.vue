@@ -1,5 +1,5 @@
 <template>
-  <h1 class="font-lato mb-20 border-b-2 text-center text-2xl">Modifier artiste</h1>
+  <h1 class="font-lato mb-20 border-b-2 text-center text-2xl">Modifier le jeu</h1>
 
   <div class="relative mt-12 mb-20 flex flex-col gap-20 px-5">
     <form @submit.prevent="UpdateJeux">
