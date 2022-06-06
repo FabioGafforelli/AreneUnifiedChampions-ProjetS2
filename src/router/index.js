@@ -4,7 +4,6 @@ import ContactView from '../views/ContactView.vue';
 import MentionslegalesView from '../views/MentionslegalesView.vue';
 import HistoireView from '../views/HistoireView.vue';
 import ReglementView from '../views/ReglementView.vue';
-import InscriptionView from '../views/InscriptionView.vue';
 import View404 from '../views/View404.vue';
 
 import CreateJeux from '../views/jeux/CreateView.vue';
@@ -12,6 +11,10 @@ import UpdateJeux from '../views/jeux/UpdateView.vue';
 import DeleteJeux from '../views/jeux/DeleteView.vue';
 import ListeJeux from '../views/jeux/ListeView.vue';
 
+import ListeJoueurs from '../views/joueurs/ListeView.vue';
+import CreateJoueurs from '../views/joueurs/CreateView.vue';
+import UpdateJoueurs from '../views/joueurs/UpdateView.vue';
+import DeleteJoueurs from '../views/joueurs/DeleteView.vue';
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -20,7 +23,6 @@ const router = createRouter({
     { path: '/mentions', name: 'MentionslegalesView', component: MentionslegalesView },
     { path: '/histoire', name: 'HistoireView', component: HistoireView },
     { path: '/reglement', name: 'ReglementView', component: ReglementView },
-    { path: '/inscription', name: 'InscriptionView', component: InscriptionView },
 
     { path: '/:pathMatch(.*)*', name: 'View404', component: View404 },
 
@@ -29,6 +31,11 @@ const router = createRouter({
     { path: '/createJeux', name: 'CreateJeux', component: CreateJeux },
     { path: '/updateJeux/:id', name: 'UpdateJeux', component: UpdateJeux },
     { path: '/deleteJeux/:id', name: 'Deletejeux', component: DeleteJeux },
+ 
+    { path: '/inscription', name: 'ListeJoueurs', component: ListeJoueurs },
+    { path: '/createjoueurs', name: 'CreateJoueurs', component: CreateJoueurs },
+    { path: '/updatejoueurs/:id', name: 'UpdateJoueurs', component: UpdateJoueurs },
+    { path: '/deletejoueurs/:id', name: 'DeleteJoueurs', component: DeleteJoueurs },
 
 
   ]

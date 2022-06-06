@@ -1,8 +1,8 @@
 <template>
-  <h1 class="font-lato mb-20 border-b-2 text-center text-2xl">Modifier le jeu</h1>
+  <h1 class="font-lato mb-20 border-b-2 text-center text-2xl">Modifier le joueurs</h1>
 
   <div class="relative mt-12 mb-20 flex flex-col gap-20 px-5">
-    <form @submit.prevent="UpdateJeux">
+    <form @submit.prevent="UpdateJoueurs">
       <div class="grid grid-cols-1 gap-4 lg:grid-cols-2">
         <div class="grid place-items-center">
           <img :src="imageData" class="w-1/2" />
@@ -10,16 +10,16 @@
         <div class="grid grid-cols-1 gap-14">
           <div class="flex h-10 overflow-hidden rounded-2xl text-white">
             <div class="font-museomoderno flex items-center justify-center border-[1px] bg-blue-700 px-5">Nom</div>
-            <input class="font-museomoderno w-full border-2 bg-white p-5" type="text" placeholder="Nom du jeu" v-model="jeux.nom" required />
+            <input class="font-museomoderno w-full border-2 bg-white p-5" type="text" placeholder="Nom du joueurs" v-model="joueurs.nom" required />
           </div>
 
           <div class="flex h-12 overflow-hidden rounded-2xl text-white">
-            <p class="font-museomoderno -mt-2 border-[1px] bg-blue-700 px-6 py-3 leading-5">Description</p>
+            <p class="font-museomoderno -mt-2 border-[1px] bg-blue-700 px-6 py-3 leading-5">Mail universitaire</p>
             <input
               class="font-museomoderno w-full border-2 bg-white p-5"
               type="text"
-              placeholder="Description du jeu"
-              v-model="jeux.description"
+              placeholder="Adresse mail universitaire"
+              v-model="joueurs.mail"
               required
             />
           </div>
@@ -40,13 +40,13 @@
 
       <div class="mt-auto grid w-full grid-cols-2 place-items-center">
         <button
-          class="font-montserrat mb-20 rounded-2xl bg-blue-700 px-1 text-white "
+          class="font-rajdhani mb-20 rounded-2xl bg-blue-700 px-1 text-white "
           type="button"
         >
-          <RouterLink to="/jeux">Annuler</RouterLink>
+          <RouterLink to="/inscription">Annuler</RouterLink>
         </button>
         <button
-          class="font-montserrat mb-20 rounded-2xl bg-blue-700 px-1 text-white"
+          class="font-rajdhani mb-20 rounded-2xl bg-blue-700 px-1 text-white"
           type="submit"
         >
           Modifier
@@ -88,7 +88,8 @@ export default {
       jeux: {
         photo: null,
         nom: null, // son prénom
-        description: null, // sa photo (nom du fichier)
+        mail: null, // sa photo (nom du fichier)
+        naissance: null
       },
 
       refjeux: null,

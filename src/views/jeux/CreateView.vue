@@ -1,5 +1,5 @@
 <template>
-  <h1 class="font-lato mb-20 mt-10 border-b-2 text-center text-2xl">Ajout d'un jeu</h1>
+  <h1 class="font-museomoderno mb-20 mt-10 border-b-2 text-center text-2xl">Ajout d'un jeu</h1>
 
   <div class="relative mt-12 mb-20 flex flex-col gap-20 px-5">
     <form enctype="multipart/form-data" @submit.prevent="CreateJeux">
@@ -10,13 +10,13 @@
         <div class="grid grid-cols-1 gap-14">
           <div class="flex h-10 overflow-hidden rounded-2xl text-black">
             <div class="flex items-center justify-center border-[1px] bg-blue-700 px-5 text-white">Nom</div>
-            <input class="font-lato w-full border-2 bg-white p-5" type="text" placeholder="Nom du jeu" v-model="jeux.nom" required />
+            <input class="font-museomoderno w-full border-2 bg-white p-5" type="text" placeholder="Nom du jeu" v-model="jeux.nom" required />
           </div>
 
           <div class="flex h-12 overflow-hidden rounded-2xl text-black">
-            <p class="font-lato border-[1px] bg-blue-700 px-6 py-3 text-white">Description</p>
+            <p class="font-museomoderno border-[1px] bg-blue-700 px-6 py-3 text-white">Description</p>
             <input
-              class="font-lato w-full border-2 bg-white p-5"
+              class="font-museomoderno w-full border-2 bg-white p-5"
               type="text"
               placeholder="Description du jeu"
               v-model="jeux.description"
@@ -25,7 +25,7 @@
           </div>
 
           <div class="flex h-10 overflow-hidden rounded-sm text-black">
-            <div class="font-lato flex items-center justify-center border-[1px] bg-blue-700 px-5 text-white">Logo</div>
+            <div class="font-museomoderno flex items-center justify-center border-[1px] bg-blue-700 px-5 text-white">Logo</div>
             <div class="custom-file">
               <input type="file" class="custom-file-input" ref="file" id="file" @change="previewImage" />
               <label class="custom-file-label" for="file">Sélectionner l'image</label>
