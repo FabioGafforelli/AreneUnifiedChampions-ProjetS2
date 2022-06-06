@@ -8,15 +8,15 @@
           <img :src="imageData" class="w-1/2" />
         </div>
         <div class="grid grid-cols-1 gap-14">
-          <div class="flex h-10 overflow-hidden rounded-2xl text-black">
-            <div class="font-lato flex items-center justify-center border-[1px] bg-violet-400 px-5">Nom</div>
-            <input class="font-lato w-full border-2 bg-white p-5" type="text" placeholder="Nom du jeu" v-model="jeux.nom" required />
+          <div class="flex h-10 overflow-hidden rounded-2xl text-white">
+            <div class="font-museomoderno flex items-center justify-center border-[1px] bg-blue-700 px-5">Nom</div>
+            <input class="font-museomoderno w-full border-2 bg-white p-5" type="text" placeholder="Nom du jeu" v-model="jeux.nom" required />
           </div>
 
-          <div class="flex h-12 overflow-hidden rounded-2xl text-black">
-            <p class="font-lato -mt-2 border-[1px] bg-violet-400 px-6 py-3 leading-5">Description</p>
+          <div class="flex h-12 overflow-hidden rounded-2xl text-white">
+            <p class="font-museomoderno -mt-2 border-[1px] bg-blue-700 px-6 py-3 leading-5">Description</p>
             <input
-              class="font-lato w-full border-2 bg-white p-5"
+              class="font-museomoderno w-full border-2 bg-white p-5"
               type="text"
               placeholder="Description du jeu"
               v-model="jeux.description"
@@ -24,24 +24,12 @@
             />
           </div>
 
-          <div class="flex h-10 overflow-hidden rounded-sm text-black">
-            <div class="font-lato flex items-center justify-center border-[1px] bg-violet-400 px-5">Photo</div>
+          <div class="flex h-10 overflow-hidden rounded-sm text-white">
+            <div class="font-museomoderno flex items-center justify-center border-[1px] bg-blue-700 px-5">Photo</div>
             <div class="relative w-full">
               <input type="file" class="font-lato relative w-full border-2 bg-white p-5" ref="file" id="file" @change="previewImage" />
               <label
-                class="
-                  font-lato
-                  absolute
-                  left-0
-                  -top-0
-                  bottom-0
-                  flex
-                  w-full
-                  items-center
-                  justify-center
-                  bg-violet-300
-                  hover:bg-violet-800 hover:text-white
-                "
+                class="font-museomoderno absolute left-0 top-0 bottom-0 flex w-full items-center justify-center bg-blue-700 text-white"
                 for="file"
                 >Sélectionner l'image</label
               >
@@ -50,15 +38,15 @@
         </div>
       </div>
 
-      <div class="mt-14 grid w-full grid-cols-2 place-items-center">
+      <div class="mt-auto grid w-full grid-cols-2 place-items-center">
         <button
-          class="font-montserrat mb-20 rounded-2xl bg-[#0369A1] py-2 px-5 text-white hover:-translate-y-0.5 hover:bg-violet-800"
+          class="font-montserrat mb-20 rounded-2xl bg-blue-700 px-1 text-white "
           type="button"
         >
           <RouterLink to="/jeux">Annuler</RouterLink>
         </button>
         <button
-          class="font-montserrat mb-20 rounded-2xl bg-[#0369A1] py-2 px-5 text-white hover:-translate-y-0.5 hover:bg-violet-800"
+          class="font-montserrat mb-20 rounded-2xl bg-blue-700 px-1 text-white"
           type="submit"
         >
           Modifier

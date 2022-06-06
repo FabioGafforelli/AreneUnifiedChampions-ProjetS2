@@ -23,7 +23,7 @@
             <td>{{ jeux.nom }}</td>
             <td>{{ jeux.description }}</td>
             <td>
-              <RouterLink to="{ name:'Updateview', params:{ id:jeux.id}}">
+            <RouterLink :to="{ name:'UpdateJeux', params:{ id:jeux.id}}">
               <Modification />
               </RouterLink>
               <Supprimer />
