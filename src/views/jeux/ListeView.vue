@@ -26,7 +26,9 @@
             <RouterLink :to="{ name:'UpdateJeux', params:{ id:jeux.id}}">
               <Modification />
               </RouterLink>
+            <RouterLink :to="{ name:'Deletejeux', params:{ id:jeux.id}}">
               <Supprimer />
+              </RouterLink>
             </td>
           </tr>
         </tbody>

@@ -1,9 +1,9 @@
 <template>
-  <h1 class="font-lato mb-10 mt-20 border-b-2 text-center text-2xl">Suppression d'un jeu</h1>
+  <h1 class="font-rajdhani mb-10 mt-20 border-b-2 text-center text-2xl">Suppression d'un jeu</h1>
 
   <div class="relative mt-2 flex flex-col gap-20 px-5">
     <div class="">
-      <p class="font-montserrat motion-safe:timepicker-clock-animation w-full bg-red-500 py-3 text-center text-white">
+      <p class="font-rajdhani w-full bg-blue-700 py-3 text-center text-white">
         Êtes-vous sur de vouloir supprimer ce jeu ?
       </p>
     </div>
@@ -14,25 +14,25 @@
         </div>
         <div class="grid grid-cols-1 gap-14">
           <div class="flex h-10 overflow-hidden rounded-2xl text-black">
-            <div class="font-lato flex items-center justify-center border-[1px] bg-violet-800 px-5 text-white">Nom</div>
-            <input class="font-lato w-full border-2 bg-white p-5" placeholder="Nom du jeu" v-model="jeux.nom" disabled />
+            <div class="font-rajdhani flex items-center justify-center border-[1px] bg-blue-700 px-5 text-white">Nom</div>
+            <input class="font-rajdhani w-full border-2 bg-white p-5" placeholder="Nom du jeu" v-model="jeux.nom" disabled />
           </div>
 
           <div class="flex h-12 overflow-hidden rounded-2xl text-black">
-            <p class="font-lato -mt-[9px] border-[1px] bg-violet-800 px-6 py-3 leading-5 text-white">Description</p>
-            <input class="font-lato w-full border-2 bg-white p-5" placeholder="Description du jeu" v-model="jeux.description" disabled />
+            <p class="font-rajdhani -mt-[9px] border-[1px] bg-blue-700 px-6 py-3 leading-5 text-white">Description</p>
+            <input class="font-rajdhani w-full border-2 bg-white p-5" placeholder="Description du jeu" v-model="jeux.description" disabled />
           </div>
         </div>
       </div>
       <div class="mt-14 grid w-full grid-cols-2 place-items-center">
         <button
-          class="font-montserrat mb-20 rounded-2xl bg-[#0369A1] py-2 px-5 text-white hover:-translate-y-0.5 hover:bg-violet-800"
+          class="font-rajdhani mb-20 rounded-2xl bg-blue-700 py-2 px-5 text-white"
           type="button"
         >
           <RouterLink to="/jeux">Annuler</RouterLink>
         </button>
         <button
-          class="font-montserrat mb-20 rounded-2xl bg-[#0369A1] py-2 px-5 text-white hover:-translate-y-0.5 hover:bg-violet-800"
+          class="font-rajdhani mb-20 rounded-2xl bg-blue-700 py-2 px-5 text-white"
           type="submit"
         >
           Supprimer
