@@ -2,12 +2,10 @@
   <Header1 />
   <h1 class="font-lato mt-10 border-b-2 text-center text-2xl">Liste des jeux sur lesquels l'arène organisera un tournoi</h1>
   <div class="relative mt-12 flex flex-col gap-20 px-5">
-    <div class="flex justify-center">
       <RouterLink to="/createJeux">
-        <div class="rounded-2xl bg-blue-700 px-10 py-4 font-museomoderno text-white hover:bg-blue-900"><p>Ajouter un jeux</p></div>
+        <div class="rounded-2xl bg-blue-700 px-10 py-4 font-museomoderno text-white"><p>Ajouter un jeux</p></div>
       </RouterLink>
-    </div>
-    <div class="block w-full overflow-x-auto">
+    <div class="block w-full">
 
       <table class="w-full">
         <thead>
@@ -24,6 +22,12 @@
             </td>
             <td>{{ jeux.nom }}</td>
             <td>{{ jeux.description }}</td>
+            <td>
+              <RouterLink to="{ name:'Updateview', params:{ id:jeux.id}}">
+              <Modification />
+              </RouterLink>
+              <Supprimer />
+            </td>
           </tr>
         </tbody>
       </table>
@@ -35,7 +39,8 @@
 <script>
 import Footer1 from "../../components/Footer.vue";
 import Header1 from "../../components/Header.vue";
-
+import Modification from "../../components/icones/Modification.vue";
+import Supprimer from "../../components/icones/Supprimer.vue";
 import {
   getFirestore, // Obtenir le Firestore
   collection, // Utiliser une collection de documents
@@ -58,7 +63,7 @@ import {
 
 export default {
   name: "ListeView",
-  components: { Header1, Footer1 },
+  components: { Header1, Footer1, Modification, Supprimer },
   data() {
     return {
       Listejeux: [],
