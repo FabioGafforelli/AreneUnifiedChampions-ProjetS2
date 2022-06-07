@@ -10,6 +10,13 @@ export default {
 
 <template class="bg-indigo-25">
     <header1 />
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
     <div class="bg-indigo-25 dark:bg-black">
 <p class="w-auto h-auto m-auto text-2xl text-center font-bold text-blue-600">Contact</p>
 <p class="flex pl-5 pt-5 pb-10 text-black dark:text-white sm:text-base lg:text-xl xl:text-2xl">Une question, une remarque à propos du tournoi de l'Arène ? Faites nous en part en remplissant le formulaire ci dessous :</p>
