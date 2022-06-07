@@ -11,6 +11,8 @@ import CreateJeux from '../views/jeux/CreateView.vue';
 import UpdateJeux from '../views/jeux/UpdateView.vue';
 import DeleteJeux from '../views/jeux/DeleteView.vue';
 import ListeJeux from '../views/jeux/ListeView.vue';
+import Headline1 from "../components/Headline.vue"
+
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -29,6 +31,7 @@ const router = createRouter({
     { path: '/createJeux', name: 'CreateJeux', component: CreateJeux },
     { path: '/updateJeux/:id', name: 'UpdateJeux', component: UpdateJeux },
     { path: '/deleteJeux/:id', name: 'Deletejeux', component: DeleteJeux },
+
 
 
   ]

@@ -2,16 +2,19 @@
 import header1 from "../components/Header.vue"
 import footer1 from "../components/Footer.vue"
 import SectionJoueur from "../components/icones/SectionJoueur.vue"
+import Headline1 from "../components/Headline.vue"
+import Bouton1 from "../components/bouton.vue"
 export default {
     name:"App",
-    components: { header1, footer1, SectionJoueur },
+    components: { header1, footer1, SectionJoueur,Headline1,Bouton1 },
 }
 </script>
 
-<template class="bg-indigo-25">
+<template>
+<main class="w-full">
     <div>
-        <header1 />
-    <div class="grid grid-flow-row-dense grid-cols-[repeat(auto-fit,minmax(350px,1fr))] gap-5  ">
+        <header1/>
+    <div class="grid grid-flow-row-dense grid-cols-[repeat(auto-fit,minmax(350px,1fr))] gap-5 m-40 ">
 <div>
     <img src="/public/images/boutonjoueur.png" alt="Scroller jusqu'à la page description joueur en cliquant sur cette image">
 </div>
@@ -21,19 +24,12 @@ export default {
 <div>
     <img src="/public/images/boutontournoi.png" alt="Scroller jusqu'à la page tournoi en cliquant sur cette image">
 </div>
-                </div>
-            
+</div>
+<headline-1></headline-1>
 <div class="flex grid-cols-3">
-        <SectionJoueur />
-     <div class=""> <h1 class="text-black text-5xl px-4 font-rajdhani">Vous êtes un</h1><h1 class="text-5xl text-transparent bg-clip-text bg-gradient-to-br from-orange-600 to-red-800"> Joueur ? </h1>
-       <p class="text-black flex pl-5 pt-5 pb-10 sm:text-2xl lg:text-2xl xl:text-3xl font-rajdhani font-bold bottom-5">Vous êtes un joueur, mais vous n’avez pas d’équipe pour la Grosse ligue ?</p>
-       <p class="text-black flex pl-5 pt-5 pb-10 sm:text-2xl lg:text-2xl xl:text-3xl font-rajdhani font-light">Pas de soucis, vous pouvez postuler en créant votre profil pour rejoindre une équipe.</p>
-       <br>
-       <p class="text-black flex pl-5 pt-5 pb-10 sm:text-2xl lg:text-2xl xl:text-3xl font-rajdhani font-light">Dans ce profil vous pouvez renseignez toute votre expérience sur le jeu “League of Legend”
-(votre rang, votre rôle...).</p>
-
+       <bouton-1></bouton-1>
 <br>
-       <p class="text-black text-2xl font-rajdhani font-normal">Vous pouvez vous rendre dans la base de donées mise à votre dispotition, Afin de trouver l’équipe qui vous correspond.</p></div>
+</div>
 </div>
 <div class="grid grid-cols-3">
     <div class="bg-gray-200 rounded-xl ml-2"> 
@@ -112,6 +108,7 @@ des matchs.</p></div>
 </div>
 
 
-</div>
+
 <footer1 />
+</main>
 </template>
