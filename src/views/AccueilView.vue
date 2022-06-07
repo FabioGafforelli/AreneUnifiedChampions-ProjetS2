@@ -45,9 +45,9 @@ export default {
         <div><h2 class="ml-4 mt-4 text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-yellow-500 to-red-700">3 étapes</h2></div>
         <br>
         <ul class="list-disc">
-            <span class="ml-4 mt-4 flex pl-5 pt-5 pb-10 sm:text-base lg:text-xl xl:text-2xl font-museomoderno font-bold text-orange-600">1.</span>
-             <p class="font-rajdhani font-bold flex pl-5 pt-5 pb-10 sm:text-base lg:text-xl xl:text-2xl text-gray-600 hover:text-black">Créer</p>
-             <p class="ml-3 flex pl-5 pt-5 pb-10 sm:text-base lg:text-xl xl:text-2xl ">votre profil</p>
+            <span class="flex pl-5 pt-5 pb-10 sm:text-base lg:text-xl xl:text-2xl font-museomoderno font-bold text-orange-600">1.</span>
+             <p class="font-rajdhani font-bold text-black text-2xl">Créer</p>
+             <p class="ml-3 text-2xl ">votre profil</p>
              </ul>
         <br>
         <div class=""><p class="flex pl-5 pt-5 pb-10 sm:text-base lg:text-xl xl:text-2xl font-museomoderno font-bold text-orange-600">2.</p> <p class="font-rajdhani font-bold text-black text-2xl">Rechercher</p><p class="ml-3 text-2xl">une équipe dans notre 
