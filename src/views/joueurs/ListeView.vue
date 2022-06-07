@@ -1,5 +1,10 @@
 <template>
   <Header1 />
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
   <h1 class="font-lato mt-10 border-b-2 text-center text-2xl">Rejoignez les joueurs déja inscrit à l'arène en vous inscrivant :</h1>
   <div class="relative mt-12 flex flex-col gap-20 px-5">
       <RouterLink to="/createJoueurs">
