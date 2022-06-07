@@ -8,6 +8,13 @@ export default {
 </script>
 <template>
 <header1 />
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
         <div class="">
     <div class="grid grid-flow-row-dense grid-cols-[repeat(auto-fit,minmax(350px,1fr))] gap-5  ">
         <div>
