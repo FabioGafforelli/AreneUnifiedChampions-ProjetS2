@@ -40,7 +40,7 @@ export default {
 <br>
 
 </div>
-<div class="grid grid-cols-3">
+<div class="grid grid-flow-row-dense grid-cols-[repeat(auto-fit,minmax(350px,1fr))]">
     <div class="bg-gray-100 rounded-xl ml-10"> 
         <div><h2 class="ml-4 mt-4 text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-yellow-500 to-red-700">3 étapes</h2></div>
         <br>
@@ -62,7 +62,7 @@ base de données en fonction de vos envies</p></div>
 <headline2></headline2>
 <bouton2></bouton2>
 
-<div class="grid grid-cols-3">
+<div class="grid grid-flow-row-dense grid-cols-[repeat(auto-fit,minmax(350px,1fr))]">
     <div class="bg-gray-200 rounded-xl ml-2"> 
         <div><h2 class="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-blue-300 to-purple-800">3 étapes</h2></div>
         <br>
