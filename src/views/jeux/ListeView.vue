@@ -1,7 +1,9 @@
 <template>
   <Header1 />
-  <h1 class="font-lato mt-10 border-b-2 text-center text-2xl">Liste des jeux sur lesquels l'arène organisera un tournoi</h1>
+  <br>
+  <br>
   <div class="relative mt-12 flex flex-col gap-20 px-5">
+      <h1 class="font-museomoderno mt-10 border-b-2 text-center text-2xl">Liste des jeux sur lesquels l'arène organisera un tournoi</h1>
       <RouterLink to="/createJeux">
         <div class="rounded-2xl bg-blue-700 px-10 py-4 font-museomoderno text-white"><p>Ajouter un jeux</p></div>
       </RouterLink>
