@@ -9,8 +9,15 @@ export default {
 </script>
 
 <template class="bg-indigo-25">
-    <div>
         <header1 />
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+<div>
     <div class="grid grid-flow-row-dense grid-cols-[repeat(auto-fit,minmax(350px,1fr))] gap-5  ">
 <div>
     <img src="/public/images/boutonjoueur.png" alt="Scroller jusqu'à la page description joueur en cliquant sur cette image">
