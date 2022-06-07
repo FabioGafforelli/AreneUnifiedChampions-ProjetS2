@@ -17,7 +17,7 @@
           <tr class="border-b-2">
             <th class="font-rajdhani w-64 p-3">Image</th>
             <th class="font-rajdhani w-1/5">Nom</th>
-            <th class="font-rajdhani mt-3 hidden w-1/5">Adresse Mail</th>
+            <th class="font-rajdhani  w-1/5">Adresse Mail</th>
             <th class="font-rajdhani">Date de naissance</th>
             <th class="font-rajdhani">Jeux</th>
             <th class="font-rajdhani">Code discord</th>
