@@ -43,6 +43,16 @@
                                     </option>
                                 </select>
                             </div>
+          <div class="flex h-12 overflow-hidden rounded-2xl text-black">
+            <p class="font-museomoderno bg-blue-700 px-6 py-0 text-white">Code discord</p>
+            <input
+              class="font-museomoderno w-full border-2 bg-white p-5"
+              type="text"
+              placeholder="Votre code discord (ex: Zerios#9102)"
+              v-model="joueurs.discord"
+              required
+            />
+          </div>
           <div class="flex h-10 overflow-hidden rounded-sm text-black">
             <div class="font-museomoderno flex items-center justify-center border-[1px] bg-blue-700 px-5 text-white">Logo</div>
             <div class="custom-file">
@@ -105,6 +115,7 @@ export default {
         mail: null, // sa photo (nom du fichier)
         naissance: null,
         jeux: null,
+        discord: null,
       },
     };
   },

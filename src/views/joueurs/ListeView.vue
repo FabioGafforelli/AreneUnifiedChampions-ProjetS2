@@ -17,20 +17,22 @@
           <tr class="border-b-2">
             <th class="font-rajdhani w-64 p-3">Image</th>
             <th class="font-rajdhani w-1/5">Nom</th>
-            <th class="font-rajdhani mt-3 hidden w-1/5 sm:flex">Adresse Mail</th>
+            <th class="font-rajdhani mt-3 hidden w-1/5">Adresse Mail</th>
             <th class="font-rajdhani">Date de naissance</th>
             <th class="font-rajdhani">Jeux</th>
+            <th class="font-rajdhani">Code discord</th>
           </tr>
         </thead>
         <tbody>
           <tr v-for="joueurs in Listejoueurs" :key="joueurs.id">
             <td class="text-center">
-              <img class="media-object imageSmall m-auto h-60" :src="joueurs.photo" :alt="joueurs.nom + ' ' + joueurs.mail + joueurs.naissance + joueurs.jeux" />
+              <img class="media-object imageSmall m-auto h-60" :src="joueurs.photo" :alt="joueurs.nom + ' ' + joueurs.mail + joueurs.naissance + joueurs.jeux + joueurs.discord" />
             </td>
             <td>{{ joueurs.nom }}</td>
             <td>{{ joueurs.mail }}</td>
             <td>{{ joueurs.naissance }}</td>
             <td>{{ joueurs.jeux }}</td>
+            <td>{{ joueurs.discord }}</td>
             <td>
             <RouterLink :to="{ name:'UpdateJoueurs', params:{ id:joueurs.id}}">
               <Modification />
