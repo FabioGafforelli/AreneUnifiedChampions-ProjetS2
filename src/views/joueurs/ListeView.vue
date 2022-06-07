@@ -24,11 +24,12 @@
         <tbody>
           <tr v-for="joueurs in Listejoueurs" :key="joueurs.id">
             <td class="text-center">
-              <img class="media-object imageSmall m-auto h-60" :src="joueurs.photo" :alt="joueurs.nom + ' ' + joueurs.mail + joueurs.naissance" />
+              <img class="media-object imageSmall m-auto h-60" :src="joueurs.photo" :alt="joueurs.nom + ' ' + joueurs.mail + joueurs.naissance + joueurs.jeux" />
             </td>
             <td>{{ joueurs.nom }}</td>
             <td>{{ joueurs.mail }}</td>
             <td>{{ joueurs.naissance }}</td>
+            <td>{{ joueurs.jeux }}</td>
             <td>
             <RouterLink :to="{ name:'UpdateJoueurs', params:{ id:joueurs.id}}">
               <Modification />

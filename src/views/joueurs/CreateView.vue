@@ -32,6 +32,17 @@
                                     format="dd/mm/yyyy" 
                                     required />                    
                             </div>
+            <div class="flex h-12 overflow-hidden rounded-2xl text-black">
+                                <p class="font-museomoderno border-[1px] bg-blue-700 px-6 py-3 text-white">
+                                  Jeux
+                                </p>
+                                <select class="custom-select" v-model="joueurs.jeux">
+                                    <option selected disabled>Sélectionner un jeu</option>
+                                    <option v-for="jeux in Listejeux" :key="jeux.nom">
+                                        {{jeux.nom}}
+                                    </option>
+                                </select>
+                            </div>
           <div class="flex h-10 overflow-hidden rounded-sm text-black">
             <div class="font-museomoderno flex items-center justify-center border-[1px] bg-blue-700 px-5 text-white">Logo</div>
             <div class="custom-file">
@@ -86,38 +97,67 @@ export default {
   data() {
     return {
       imageData: null, // Image prévisualisée
+      Listejeux:[],           // Liste des pays pour la nationalité du participant
       Listejoueurs: [],
       joueurs: {
         photo: null,
         nom: null, // son prénom
         mail: null, // sa photo (nom du fichier)
         naissance: null,
+        jeux: null,
       },
     };
   },
-  mounted() {
-    // Montage de la vue
-    // Appel de la liste des pays
-    this.getjoueurs();
-  },
-  methods: {
-    async getjoueurs() {
-      // Obtenir Firestore
-      const firestore = getFirestore();
-
-      const dbjoueurs = collection(firestore, "joueurs");
-
-      // query permet de faire une requête sur Firebase
-      // notement pour filtrer, trier ... des données
-      //orderBy permet de préciser sur quel élément trier, et dans quel ordre
-      // ici le nom du pays par ordre croissant (asc)
-      const q = query(dbjoueurs, orderBy("nom", "asc"));
-      // Récupération de la liste des pays à partir de la query
-      // La liste est synchronisée
-      await onSnapshot(q, (snapshot) => {
-        this.Listejoueurs = snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
-        console.log("Liste des joueurs", this.Listejoueurs);
-      });
+     mounted(){ // Montage de la vue
+        // Appel de la liste des pays
+        this.getJeux();
+    },
+    methods : {
+        async getJeux(){            
+            // Obtenir Firestore
+            const firestore = getFirestore();
+            // Base de données (collection)  document pays
+            const dbJeux = collection(firestore, "jeux");
+            // Liste des participants triés
+            // query permet de faire une requête sur Firebase
+            // notement pour filtrer, trier ... des données
+            //orderBy permet de préciser sur quel élément trier, et dans quel ordre
+            // ici le nom du pays par ordre croissant (asc)            
+            const q = query(dbJeux, orderBy('nom', 'asc'));
+            // Récupération de la liste des pays à partir de la query
+            // La liste est synchronisée
+            await onSnapshot(q, (snapshot) => {
+                this.Listejeux = snapshot.docs.map(doc => (
+                    {id:doc.id, ...doc.data()}
+                ))  
+console.log("Liste des jeux", this.Listejeux);      
+            })      
+        },
+            mounted(){ // Montage de la vue
+        // Appel de la liste des pays
+        this.getPays();
+    },
+    methods : {
+        async getPays(){            
+            // Obtenir Firestore
+            const firestore = getFirestore();
+            // Base de données (collection)  document pays
+            const dbPays = collection(firestore, "pays");
+            // Liste des participants triés
+            // query permet de faire une requête sur Firebase
+            // notement pour filtrer, trier ... des données
+            //orderBy permet de préciser sur quel élément trier, et dans quel ordre
+            // ici le nom du pays par ordre croissant (asc)            
+            const q = query(dbPays, orderBy('nom', 'asc'));
+            // Récupération de la liste des pays à partir de la query
+            // La liste est synchronisée
+            await onSnapshot(q, (snapshot) => {
+                this.listePays = snapshot.docs.map(doc => (
+                    {id:doc.id, ...doc.data()}
+                ))  
+console.log("Liste des pays", this.listePays);      
+            })      
+        },
     },
 
     previewImage: function (event) {
@@ -159,6 +199,6 @@ export default {
 
       this.$router.push("/inscription");
     },
-  },
-};
+},
+}
 </script>
