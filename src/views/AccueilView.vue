@@ -36,7 +36,7 @@ export default {
                 </div>
 <headline-1></headline-1>
 
-       <bouton-1></bouton-1>
+       <RouterLink to="/inscription"><bouton-1></bouton-1></RouterLink>
 <br>
 
 </div>
@@ -60,7 +60,7 @@ base de données en fonction de vos envies</p></div>
 <img class="w-full" src="/public/images/Vector21.png" alt="">
 
 <headline2></headline2>
-<bouton2></bouton2>
+<RouterLink to="/inscription"><bouton2></bouton2></RouterLink>
 
 <div class="grid grid-flow-row-dense grid-cols-[repeat(auto-fit,minmax(350px,1fr))]">
     <div class="bg-gray-200 rounded-xl ml-2"> 
