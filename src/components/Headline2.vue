@@ -3,7 +3,7 @@
   
     <!-- Hero image -->
 	<div class="">
-		<img src="public/images/SectionEquipe.png" class="md: align-content:center block mb-8 lg:mb-20" />
+		<img src="/public/images/SectionEquipe.png" class="md: align-content:center block mb-8 lg:mb-20" />
 		</div>
 		<!-- Première page -->
 		<section class="md:w-6/12">
