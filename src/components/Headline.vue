@@ -7,8 +7,8 @@
 		</div>
 		<!-- Première page -->
 		<section class="md:w-6/12">
-			<h1 id="heading" class="text-center lg:text-5xl lg:leading-snug text-3xl text-black font-semibold">
-				Vous êtes un <span class="text-5xl text-transparent bg-clip-text bg-gradient-to-br from-yellow-600 to-red-600"> Joueur </span>
+			<h1 id="heading" class="text-center lg:text-5xl lg:leading-snug text-3xl text-gray-800 font-semibold">
+				Vous êtes un <span class="text-5xl text-transparent bg-clip-text bg-gradient-to-br from-yellow-600 to-red-600"> Joueur</span>
 			</h1>
 			<p class="lg:text-4xl text-gray-800 font-medium mt-4">Vous êtes un joueur, mais vous n’avez pas d’équipe pour la Grosse ligue ?</p>
 			<br>

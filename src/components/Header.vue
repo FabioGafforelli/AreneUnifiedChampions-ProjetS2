@@ -1,7 +1,7 @@
 <template>
 	<main class="navbar">
 		<section class="navbar-brand">
-			<img src="/logo.png" width="60" />
+			<img src="/Logo.png" width="60" />
 			<h1 class="text-gray-50 text-xl font-bold lg:text-3xl">Arena</h1>
 			<button @click="showMenu = true" class="active:scale-95 duration-300 md:hidden" type="button">
 				<i class="fa fa-bars text-gray-50 text-2xl"></i>

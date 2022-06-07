@@ -11,7 +11,8 @@ import CreateJeux from '../views/jeux/CreateView.vue';
 import UpdateJeux from '../views/jeux/UpdateView.vue';
 import DeleteJeux from '../views/jeux/DeleteView.vue';
 import ListeJeux from '../views/jeux/ListeView.vue';
-import Headline1 from "../components/Headline.vue"
+import Headline1 from "../components/Headline.vue";
+import Headline2 from "../components/Headline2.vue";
 
 
 const router = createRouter({
