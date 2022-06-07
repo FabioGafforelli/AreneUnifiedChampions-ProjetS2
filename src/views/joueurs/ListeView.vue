@@ -18,7 +18,8 @@
             <th class="font-rajdhani w-64 p-3">Image</th>
             <th class="font-rajdhani w-1/5">Nom</th>
             <th class="font-rajdhani mt-3 hidden w-1/5 sm:flex">Adresse Mail</th>
-            <th class="font-rajdhani left-0 sm:flex">Date de naissance</th>
+            <th class="font-rajdhani">Date de naissance</th>
+            <th class="font-rajdhani">Jeux</th>
           </tr>
         </thead>
         <tbody>
