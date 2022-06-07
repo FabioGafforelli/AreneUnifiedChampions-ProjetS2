@@ -1,79 +1,76 @@
 <template>
-	<main class="navbar">
-		<section class="navbar-brand">
-			<img src="/Logo.png" width="60" />
-			<h1 class="text-gray-50 text-xl font-bold lg:text-3xl">Arena</h1>
-			<button @click="showMenu = true" class="active:scale-95 duration-300 md:hidden" type="button">
-				<i class="fa fa-bars text-gray-50 text-2xl"></i>
-			</button>
-		</section>
-		
-		<section :class="showMenu ? 'right-0' : '-right-full'" class="navbar-menu">
-			<ul class="navbar-list">
-			<span @click="showMenu = false" class=" md:hidden"><i class="fa fa-times text-gray-50"></i></span>
-				<template v-for="(menu, x) in menus" :key="x">
-					<li :class="menuActive === menu.name ? 'border-b-4 border-blue-400' : ''" class="text-gray-50 font-medium duration-300">
-						<a @click="menuActive = menu.name" :href="menu.to" >{{ menu.name }}</a>
-					</li>
-				</template>
-			</ul>
-		</section>
-	</main>
+<header class=" bg-gradient-to-br from-sky-500 to-indigo-600 drop-shadow-lg z-10 fixed top-0 left-0 right-0 px-5 lg:py-8 py-3">
+    <a href="#content" class="sr-only focus:not-sr-only text-lg text-white"> Passez au contenu </a>
+    <nav class=" lg:flex lg:justify-between items-center">
+      <div class="flex justify-between items-center">
+       <RouterLink to="/"><Logo class="w-24 h-24"/></RouterLink> 			
+	   <h1 class="text-gray-50 text-xl font-bold lg:text-3xl">Arena</h1>
+      <span class="text-3xl cursor-pointer lg:hidden block w-8 h-8 mr-25  ">
+        <MenuIcon class=" text-white"  aria-controls="menu"
+        :aria-expanded="menuOuvert"
+        @click="menuOuvert = !menuOuvert">
+        </MenuIcon>
+        <span class="sr-only ">Menu</span>
+      </span>
+      </div>
+      <Transition
+        enter="transition duration-2000 ease-out"
+        enterFrom="transform translate-x-full opacity-0"
+        enterTo="transform translate-x-0 opacity-100"
+        leave="transition duration-1750 ease-out"
+        leaveFrom="transform  translate-x-0 opacity-100"
+        leaveTo="transform translate-x-full opacity-0"
+      >
+      <ul id="menu" v-if="menuOuvert" class="lg:hidden bg-white w-full  text-xl font-museomoderno  py-4 text-center" >
+        <li class="my-3">
+          <RouterLink class="my-6 lg:px-4 xl:pt-2 xl:rounded-sm font-museomoderno text-black  " to="/histoire">Histoire</RouterLink>
+        </li>
+        <li class="my-3">
+          <RouterLink class="my-6 lg:px-4 xl:pt-2 xl:rounded-sm font-museomoderno text-black " to="/reglement">Réglement</RouterLink>
+        </li>
+        <li class="my-3">
+          <RouterLink class="my-6 lg:px-4 xl:pt-2 xl:rounded-sm text-black font-museomoderno " to="/jeux">Jeux/Tournoi</RouterLink>
+        </li>
+        <li class="my-3">
+          <RouterLink class="my-6 lg:px-4 xl:pt-2 xl:rounded-sm font-museomoderno text-black " to="/inscription">S'inscrire</RouterLink>
+        </li>
+        <li class="my-3">
+          <RouterLink class="my-6 lg:px-4 xl:pt-2 xl:rounded-sm font-museomoderno text-black" to="/contact">Contact</RouterLink>
+        </li>
+      </ul>
+      </Transition>
+      <ul class="lg:flex  gap-6 lg:items-center text-white text-xl font-algerian mx-6 py-4 hidden" >
+        <li class="my-3">
+          <RouterLink class="my-6 lg:px-2 xl:pt-2 xl:rounded-sm font-museomoderno text-white" to="/histoire">Histoire</RouterLink>
+        </li>
+        <li class="my-3">
+          <RouterLink class="my-6 lg:px-2 xl:pt-2 xl:rounded-sm font-algerian text-white " to="reglement">Réglement</RouterLink>
+        </li>
+        <li class="my-3">
+          <RouterLink class="my-6 lg:px-2 xl:pt-2 xl:rounded-sm font-algerian text-white " to="/jeux">Jeux/Tournoi</RouterLink>
+        </li>
+        <li class="my-3">
+          <RouterLink class="my-6 lg:px-2 xl:pt-2 xl:rounded-sm font-algerian text-white " to="/inscription">S'inscrire</RouterLink>
+        </li>
+        <li class="my-3">
+          <RouterLink class="my-6 lg:px-2 xl:pt-2 xl:rounded-sm font-algerian text-white " to="/contact">Contact</RouterLink>
+        </li>
+      </ul>    
+    </nav>
+  </header>
 </template>
 
-<style scoped>
-	.navbar {
-		@apply z-20 md:flex md:items-center md:justify-between md:px-6 md:py-8 lg:px-10 w-full bg-gradient-to-r from-sky-500 to-indigo-600 fixed top-0 left-0 right-0 px-5 lg:py-8 py-3;
-	}
-
-	.navbar-brand {
-		@apply flex items-center justify-between md:gap-3;
-	}
-
-	.navbar-menu {
-		@apply duration-300 fixed md:relative top-0 bottom-0 bg-blue-600 md:bg-opacity-0 px-5 lg:px-0 pt-12 md:pt-0;
-	}
-
-	.navbar-list {
-		@apply flex flex-col md:flex-row gap-3 md:gap-6 lg:gap-10 lg:text-xl;
-	}
-</style>
-
-<script setup>
-
-	import { ref } from 'vue'
-
-	const menuActive = ref('Beranda')
-	const showMenu = ref(false)
-	const viewport = ref(window.innerWidth) 
-
-	if ( viewport.value >= 768 ) showMenu.value = true 
-	
-	const menus = [
-    {
-			name: 'Acceuil',
-			to: '/'
-		},
-		{
-			name: 'Histoire',
-			to: '/histoire'
-		},
-		{
-			name: 'Réglement',
-			to: '/reglement'
-		},
-		{
-			name: 'Jeux/Tournois',
-			to: '/jeux'
-		},
-		{
-			name: "S'inscrire",
-			to: '/inscription'
-		},
-		{
-			name: 'Contact',
-			to: '/contact'
-		},
-	]
-	
+<script>
+import Logo from './icones/Logo.vue'
+import Navigation from './icones/Navbar.vue'
+import { MenuIcon, } from "@heroicons/vue/solid";
+export default {
+  name: "App",
+  components: { MenuIcon,Logo,Navigation },
+    data() {
+    return {
+      menuOuvert: false,
+    };
+    },
+}
 </script>
