@@ -13,10 +13,10 @@ export default {
 </script>
 
 <template>
-<main class="w-full">
-    <div>
+<main class="">
         <header1/>
-    <div class="grid grid-flow-row-dense grid-cols-[repeat(auto-fit,minmax(350px,1fr))] gap-5 m-40 ">
+<div>
+    <div class="grid grid-flow-row-dense grid-cols-[repeat(auto-fit,minmax(350px,1fr))] gap-5  ">
 <div>
     <img src="/public/images/boutonjoueur.png" alt="Scroller jusqu'à la page description joueur en cliquant sur cette image">
 </div>
@@ -26,7 +26,7 @@ export default {
 <div>
     <img src="/public/images/boutontournoi.png" alt="Scroller jusqu'à la page tournoi en cliquant sur cette image">
 </div>
-</div>
+                </div>
 <headline-1></headline-1>
 
        <bouton-1></bouton-1>

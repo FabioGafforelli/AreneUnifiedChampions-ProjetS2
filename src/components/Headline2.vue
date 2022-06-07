@@ -1,5 +1,5 @@
 <template>
-	<main class="z-10 mt-20 md:py-10 lg:pt-40 pr-28 pl-60 md:flex md:flex-row md:justify-between md:items-center gap-3">
+	<main class="grid grid-flow-row-dense grid-cols-[repeat(auto-fit,minmax(350px,1fr))]">
   
     <!-- Hero image -->
 	<div class="">
