@@ -176,8 +176,7 @@ Le Staff travaille au mieux pour que les joueurs prennent du plaisir. Faites le 
 Restez cools, soyez fair-play. C’est ça les valeurs du sport !</p>
   </div>
                 </div>
-                        <img class="mr-auto" src="/public/images/BoutonProfil.png" alt="Inscrivez vous à l'arène">
-
+                      <RouterLink to="/inscription"><img class="mr-auto" src="/public/images/BoutonProfil.png" alt="Inscrivez vous à l'arène"></RouterLink>  
             
 
 

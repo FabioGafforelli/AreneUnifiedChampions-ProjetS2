@@ -55,8 +55,7 @@ Merci à tous pour votre soutien,
 Et à bientôt la #TeamU2C,</p>
         </div>
                 </div>
-                        <img class="mr-auto" src="/public/images/BoutonProfil.png" alt="Inscrivez vous à l'arène">
-
+        <RouterLink to="/inscription"><img class="mr-auto" src="/public/images/BoutonProfil.png" alt="Inscrivez vous à l'arène"></RouterLink> 
             
 
 
