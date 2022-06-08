@@ -27,6 +27,15 @@ export default {
                  <RouterLink to="/partenaires" class="my-3 block text-white hover:text-gray-100 text-sm  font-normal duration-700">
                     Devenir partenaire
                 </RouterLink>
+                 <a href="https://www.unifiedchampions.fr" class="my-3 block text-white hover:text-gray-100 text-sm  font-normal duration-700">
+                    Unified Champions
+                </a>
+                 <a href="https://www.unifiedchampionsclub.fr" class="my-3 block text-white hover:text-gray-100 text-sm  font-normal duration-700">
+                    Unified Champions Club
+                </a>
+                 <a href="https://boutique.unifiedchampions.fr/" class="my-3 block text-white hover:text-gray-100 text-sm  font-normal duration-700">
+                    La boutique Unified Champions
+                </a>
             </div>
 
 
