@@ -2,10 +2,9 @@
 import header1 from "../components/Header.vue"
 import footer1 from "../components/Footer.vue"
 import Bouton1 from "../components/bouton.vue"
-import bouton2 from "../components/bouton2.vue"
 export default {
     name:"App",
-    components: { header1, footer1, Bouton1, bouton2 },
+    components: { header1, footer1, Bouton1 },
 }
 </script>
 
@@ -57,7 +56,7 @@ Merci à tous pour votre soutien,
 Et à bientôt la #TeamU2C,</p>
         </div>
                 </div>
-        <RouterLink to="/inscription"><Bouton1 />></RouterLink> 
+        <RouterLink to="/inscription"><Bouton1 /></RouterLink> 
             
 
 
