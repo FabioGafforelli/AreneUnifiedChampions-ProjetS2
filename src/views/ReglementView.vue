@@ -1,9 +1,11 @@
 <script>
 import header1 from "../components/Header.vue"
 import footer1 from "../components/Footer.vue"
+import Bouton1 from "../components/bouton.vue"
+
 export default {
     name:"App",
-    components: { header1, footer1 },
+    components: { header1, footer1, Bouton1 },
 }
 </script>
 <template>
@@ -176,7 +178,7 @@ Le Staff travaille au mieux pour que les joueurs prennent du plaisir. Faites le 
 Restez cools, soyez fair-play. C’est ça les valeurs du sport !</p>
   </div>
                 </div>
-                      <RouterLink to="/inscription"><img class="mr-auto" src="/public/images/BoutonProfil.png" alt="Inscrivez vous à l'arène"></RouterLink>  
+                      <RouterLink to="/inscription"><Bouton1 /></RouterLink>  
             
 
 
