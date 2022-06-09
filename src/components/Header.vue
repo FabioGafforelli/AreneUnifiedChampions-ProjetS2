@@ -12,7 +12,7 @@
 			<ul class="navbar-list">
 			<span @click="showMenu = false" class=" md:hidden"><i class="fa fa-times text-gray-50"></i></span>
 				<template v-for="(menu, x) in menus" :key="x">
-					<li :class="menuActive === menu.name ? 'border-b-4 border-blue-400' : ''" class="text-gray-50 font-medium duration-300">
+					<li :class="menuActive === menu.name ? 'border-b-4 border-blue-400' : ''" class="text-gray-50 font-Rajdhani font-semibold duration-300">
 						<a @click="menuActive = menu.name" :href="menu.to" >{{ menu.name }}</a>
 					</li>
 				</template>
