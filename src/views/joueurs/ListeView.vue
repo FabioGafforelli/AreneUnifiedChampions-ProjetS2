@@ -33,14 +33,6 @@
             <td>{{ joueurs.naissance }}</td>
             <td>{{ joueurs.jeux }}</td>
             <td>{{ joueurs.discord }}</td>
-            <td>
-            <RouterLink :to="{ name:'UpdateJoueurs', params:{ id:joueurs.id}}">
-              <Modification />
-              </RouterLink>
-            <RouterLink :to="{ name:'Deletejoueurs', params:{ id:joueurs.id}}">
-              <Supprimer />
-              </RouterLink>
-            </td>
           </tr>
         </tbody>
       </table>
