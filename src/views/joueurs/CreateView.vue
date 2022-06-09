@@ -10,7 +10,7 @@
         <div class="grid grid-cols-1 gap-14">
           <div class="flex h-10 overflow-hidden rounded-2xl text-black">
             <div class="flex items-center justify-center border-[1px] bg-blue-700 px-5 text-white">Nom</div>
-            <input class="font-museomoderno w-full border-2 bg-white p-5" type="text" placeholder="Nom du jeu" v-model="joueurs.nom" required />
+            <input class="font-museomoderno w-full border-2 bg-white p-5" type="text" placeholder="Nom du joueur" v-model="joueurs.nom" required />
           </div>
 
           <div class="flex h-12 overflow-hidden rounded-2xl text-black">
