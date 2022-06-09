@@ -1,5 +1,5 @@
 <template>
-	<main class="grid grid-flow-row-dense grid-cols-[repeat(auto-fit,minmax(350px,1fr))]">
+	<main id="heading1" class="grid grid-flow-row-dense grid-cols-[repeat(auto-fit,minmax(350px,1fr))]">
   
     <!-- Hero image -->
 	<div class="">

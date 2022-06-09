@@ -1,5 +1,5 @@
 <template>
-	<main id="heading3" class=" md:py-0 lg: pr-28 pl-60 md:flex md:flex-row md:justify-between md:items-center gap-3 ">
+	<main id="heading3" class="grid grid-flow-row-dense grid-cols-[repeat(auto-fit,minmax(350px,1fr))">
   
     <!-- Hero image -->
 	<div class="">
