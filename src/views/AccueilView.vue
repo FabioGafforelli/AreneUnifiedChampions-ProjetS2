@@ -29,44 +29,51 @@ export default {
 </div>
 <headline-1></headline-1>
 
-       <bouton-1></bouton-1>
+       
 <br>
 
 </div>
-<div class="grid grid-cols-3">
+<div class="grid grid-cols-3 z-10 mt-40 md:flex md:flex-row md:justify-between md:items-center gap-3">
     <div class="bg-gray-100 rounded-xl ml-10"> 
-        <div><h2 class="ml-4 mt-4 text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-yellow-500 to-red-700">3 étapes</h2></div>
-        <br>
-        <ul class="list-disc">
-            <span class="ml-4 mt-4 text-2xl font-museomoderno font-bold text-orange-600">1.</span>
-             <p class="font-rajdhani font-bold text-2xl text-gray-600 hover:text-black">Créer</p>
-             <p class="ml-3 text-2xl ">votre profil</p>
-             </ul>
-        <br>
-        <div class=""><p class=" text-2xl font-museomoderno font-bold text-orange-600">2.</p> <p class="font-rajdhani font-bold text-black text-2xl">Rechercher</p><p class="ml-3 text-2xl">une équipe dans notre 
-base de données en fonction de vos envies</p></div>
-        <br>
-        <div class=""><p class=" text-2xl font-museomoderno font-bold text-orange-600">3.</p> <p class="font-rajdhani font-bold text-black text-2xl"> Intégrer</p><p class="ml-3 text-2xl">votre nouvelle équipe et GAGNEZ !</p></div>
+        <div><h2 class="ml-4 mt-4 text-5xl font-bold font-rajdhani text-transparent bg-clip-text bg-gradient-to-r from-yellow-500 to-red-600">3 étapes  </h2></div>
+            <p class="ml-4 mt-8 text-2xl font-bold font-rajdhani text-yellow-500">1.<span class="font-rajdhani font-bold text-2xl text-gray-800 ml-2">Créer</span>
+             <span class="ml-1 font-rajdhani font-bold text-2xl text-gray-600 mr-4">votre profil</span>
+        </p>
+            <p class="ml-4 mt-6 text-2xl font-bold font-rajdhani text-orange-600">2.<span class="font-rajdhani font-bold text-2xl text-gray-800 ml-2">Rechercher</span>
+             <span class="ml-1 font-rajdhani font-bold text-2xl text-gray-600 mr-4">une équipe dans notre base de données</span>
+        </p>   
+                <p class="ml-4 mt-6 text-2xl font-bold font-rajdhani text-red-600">3.<span class="font-rajdhani font-bold text-2xl text-gray-800 ml-2">Intégrer</span>
+             <span class="ml-1 font-rajdhani font-bold text-2xl text-gray-600 mr-4">votre nouvelle équipe et GAGNEZ !</span>
+        </p>
         </div>
+        <bouton-1></bouton-1>
 </div>
 
-<img class="w-full" src="/public/images/Vector 21.png" alt="">
+<img class="w-full" src="/public/images/Vector 21.png" alt="Séparateur visuel">
 
 <headline2></headline2>
-<bouton2></bouton2>
 
-<div class="grid grid-cols-3">
-    <div class="bg-gray-200 rounded-xl ml-2"> 
-        <div><h2 class="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-blue-300 to-purple-800">3 étapes</h2></div>
-        <br>
-        <div class=""><p class=" text-2xl font-museomoderno font-bold text-blue-600">1.</p> <p class="font-rajdhani font-bold text-black text-2xl">Créer</p><p class="ml-3 text-2xl">votre équipe.</p></div>
-        <br>
-        <div class=""><p class=" text-2xl font-museomoderno font-bold text-purple-600">2.</p> <p class="font-rajdhani font-bold text-black text-2xl">Rechercher</p><p class="ml-3 text-2xl">des joueurs dans notre
- base de données en fonction de vos envies</p></div>
-        <br>
-        <div class=""><p class=" text-2xl font-museomoderno font-bold text-pink-600">3.</p> <p class="font-rajdhani font-bold text-black text-2xl"> Recrutez</p><p class="ml-3 text-2xl">des nouveaux joueurs et GAGNEZ !</p></div>
+
+<div class="grid grid-cols-3 z-10 mt-40 md:flex md:flex-row md:justify-between md:items-center gap-3">
+    
+    
+    <div class="bg-gray-100 rounded-xl ml-10"> 
+        <div><h2 class="ml-4 mt-4 text-5xl font-bold font-rajdhani text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-purple-800">3 étapes </h2></div>
+            <p class="ml-4 mt-8 text-2xl font-bold font-rajdhani text-blue-500">1.<span class="font-rajdhani font-bold text-2xl text-gray-800 ml-2">Créer</span>
+             <span class="ml-1 font-rajdhani font-bold text-2xl text-gray-600 mr-4">votre équipe.</span>
+        </p>
+            <p class="ml-4 mt-6 text-2xl font-bold font-rajdhani text-purple-600">2.<span class="font-rajdhani font-bold text-2xl text-gray-800 ml-2">Rechercher</span>
+             <span class="ml-1 font-rajdhani font-bold text-2xl text-gray-600 mr-4">des joueurs dans notre base de données </span>
+        </p>   
+                <p class="ml-4 mt-6 text-2xl font-bold font-rajdhani text-pink-600">3.<span class="font-rajdhani font-bold text-2xl text-gray-800 ml-2">Recrutez</span>
+             <span class="ml-1 font-rajdhani font-bold text-2xl text-gray-600 mr-4">des nouveaux joueurs et GAGNEZ !</span>
+        </p>
         </div>
+
+        <bouton2></bouton2>
 </div>
+
+
 <br>
 <div class="flex grid-cols-3">
         <img class="w-12 h-12" src="/public/images/Sectiontournois.png" alt="">
