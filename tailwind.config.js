@@ -14,9 +14,10 @@ module.exports = {
             "base": "2rem"
           },
           "fontFamily": {
-           "circular-std": "Circular Std",
-           "rajdhani": "Rajdhani",
-           "museomoderno": "MuseoModerno"
+            heading: ['Rajdhani'],
+            "circular-std": "Circular Std",
+            "rajdhani": "Rajdhani",
+            "museomoderno": "MuseoModerno"
           },
           "borderRadius": {
            "none": "0",
