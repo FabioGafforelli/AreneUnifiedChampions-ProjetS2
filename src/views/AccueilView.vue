@@ -59,7 +59,7 @@ export default {
         <bouton-1></bouton-1>
 </div>
 
-<img class="w-full" src="/public/images/Vector 21.png" alt="séparateur visuel">
+<img class="w-full" src="/public/images/Vector21.png" alt="séparateur visuel">
 
 <headline2></headline2>
 
@@ -79,7 +79,7 @@ export default {
         <bouton2></bouton2>
 
 </div>
-<img class="w-full" src="/public/images/Vector 21.png" alt="séparateur visuel">
+<img class="w-full" src="/public/images/Vector21.png" alt="séparateur visuel">
 <br>
 <headline3></headline3>
 <footer1 />
