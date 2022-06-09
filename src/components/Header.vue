@@ -21,21 +21,21 @@
         leaveFrom="transform  translate-x-0 opacity-100"
         leaveTo="transform translate-x-full opacity-0"
       >
-      <ul id="menu" v-if="menuOuvert" class="lg:hidden bg-white w-full  text-xl font-museomoderno  py-4 text-center" >
+      <ul id="menu" v-if="menuOuvert" class="lg:hidden w-full  text-xl font-museomoderno  py-4 text-center" >
         <li class="my-3">
-          <RouterLink class="my-6 lg:px-4 xl:pt-2 xl:rounded-sm font-museomoderno text-black  " to="/histoire">Histoire</RouterLink>
+          <RouterLink class="my-6 lg:px-4 xl:pt-2 xl:rounded-sm font-museomoderno text-white  " to="/histoire">Histoire</RouterLink>
         </li>
         <li class="my-3">
-          <RouterLink class="my-6 lg:px-4 xl:pt-2 xl:rounded-sm font-museomoderno text-black " to="/reglement">Réglement</RouterLink>
+          <RouterLink class="my-6 lg:px-4 xl:pt-2 xl:rounded-sm font-museomoderno text-white " to="/reglement">Réglement</RouterLink>
         </li>
         <li class="my-3">
-          <RouterLink class="my-6 lg:px-4 xl:pt-2 xl:rounded-sm text-black font-museomoderno " to="/jeux">Jeux/Tournoi</RouterLink>
+          <RouterLink class="my-6 lg:px-4 xl:pt-2 xl:rounded-sm text-white font-museomoderno " to="/jeux">Jeux/Tournoi</RouterLink>
         </li>
         <li class="my-3">
-          <RouterLink class="my-6 lg:px-4 xl:pt-2 xl:rounded-sm font-museomoderno text-black " to="/inscription">S'inscrire</RouterLink>
+          <RouterLink class="my-6 lg:px-4 xl:pt-2 xl:rounded-sm font-museomoderno text-white " to="/inscription">S'inscrire</RouterLink>
         </li>
         <li class="my-3">
-          <RouterLink class="my-6 lg:px-4 xl:pt-2 xl:rounded-sm font-museomoderno text-black" to="/contact">Contact</RouterLink>
+          <RouterLink class="my-6 lg:px-4 xl:pt-2 xl:rounded-sm font-museomoderno text-white" to="/contact">Contact</RouterLink>
         </li>
       </ul>
       </Transition>
