@@ -73,7 +73,7 @@
           class="font-rajdhani mb-20 rounded-2xl bg-blue-600 py-2 px-5 text-white"
           type="button"
         >
-          <RouterLink to="/jeux">Annuler</RouterLink>
+          <RouterLink to="/inscription">Annuler</RouterLink>
         </button>
       </div>
     </form>
