@@ -1,9 +1,5 @@
 <script>
-import Logo from './icones/Logo.vue'
 
-export default {
-    components:{ Logo },
-}
 </script>
 
 
@@ -12,7 +8,7 @@ export default {
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@iconscout/unicons@3.0.6/css/line.css">
 
 
-<footer class="bg-gradient-to-bl from-indigo-500 to-blue-700 pt-10 sm:mt-10">
+<footer class="bg-gradient-to-bl from-red-500 to-red-700 pt-10 sm:mt-10">
     <div>
         <RouterLink to="/">
         <Logo class=" w-24 h-24 ml-6" /></RouterLink>
@@ -24,18 +20,7 @@ export default {
                 <div class="text-xs uppercase text-white font-bold mb-6">
                     A propos
                 </div>
-                 <RouterLink to="/partenaires" class="my-3 block text-white hover:text-gray-100 text-sm  font-normal duration-700">
                     Devenir partenaire
-                </RouterLink>
-                 <a href="https://www.unifiedchampions.fr" class="my-3 block text-white hover:text-gray-100 text-sm  font-normal duration-700">
-                    Unified Champions
-                </a>
-                 <a href="https://www.unifiedchampionsclub.fr" class="my-3 block text-white hover:text-gray-100 text-sm  font-normal duration-700">
-                    Unified Champions Club
-                </a>
-                 <a href="https://boutique.unifiedchampions.fr/" class="my-3 block text-white hover:text-gray-100 text-sm  font-normal duration-700">
-                    La boutique Unified Champions
-                </a>
             </div>
 
 
@@ -66,7 +51,7 @@ export default {
             border-t border-indigo-100 text-white text-sm 
             flex-col md:flex-row max-w-6xl">
             <div class="mt-2 text-center">
-                ©2022 Unified Champions - Arena. All rights reserved
+                ©2022 BFC TV. All rights reserved
             </div>
         </div>
     </div>
