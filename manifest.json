@@ -1,17 +1,23 @@
 {
   "background_color": "#ffffff",
-  "description": "L'arene, tournoi de l'unified champions",
+  "description": "",
   "dir": "ltr",
   "display": "standalone",
-  "name": "Arene Unified Champions",
+  "name": "stellar-gingersnap-59d925.netlify",
   "orientation": "any",
   "scope": "/",
-  "short_name": "Arene Unified Champions",
+  "short_name": "stellar-gingersnap-59d925.netlify",
   "start_url": "/",
   "theme_color": "#ffffff",
   "categories": [],
-  "screenshots": [],
-  "icons": [
+"screenshots" : [
+  {
+    "src": "screenshot.jpg",
+    "sizes": "1280x720",
+    "type": "image/jpg",
+    "platform": "wide",
+  }
+]  "icons": [
     {
       "src": "/assets/Logo.b0eb28f0.png",
       "type": "image/png",
