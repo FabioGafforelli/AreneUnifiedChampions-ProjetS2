@@ -1,0 +1,26 @@
+{
+  "background_color": "#ffffff",
+  "description": "L'arene, tournoi de l'unified champions",
+  "dir": "ltr",
+  "display": "standalone",
+  "name": "Arene Unified Champions",
+  "orientation": "any",
+  "scope": "/",
+  "short_name": "Arene Unified Champions",
+  "start_url": "/",
+  "theme_color": "#ffffff",
+  "categories": [],
+  "screenshots": [],
+  "icons": [
+    {
+      "src": "/assets/Logo.b0eb28f0.png",
+      "type": "image/png",
+      "sizes": "150x150"
+    },
+    {
+      "src": "/favicon.ico",
+      "type": "image/x-icon"
+    }
+  ],
+  "shortcuts": []
+}
