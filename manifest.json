@@ -1,23 +1,19 @@
 {
   "background_color": "#ffffff",
-  "description": "",
+  "description": "Arene UFC",
   "dir": "ltr",
   "display": "standalone",
-  "name": "stellar-gingersnap-59d925.netlify",
+  "name": "Arene Unified Champions",
   "orientation": "any",
-  "scope": "/",
-  "short_name": "stellar-gingersnap-59d925.netlify",
-  "start_url": "/",
+  "scope": "/https://stellar-gingersnap-59d925.netlify.app/",
+  "short_name": "Arene Unified Champions",
+  "start_url": "https://stellar-gingersnap-59d925.netlify.app/",
   "theme_color": "#ffffff",
-  "categories": [],
-"screenshots" : [
-  {
-    "src": "screenshot.jpg",
-    "sizes": "1280x720",
-    "type": "image/jpg",
-    "platform": "wide",
-  }
-]  "icons": [
+  "categories": [
+    "entertainment"
+  ],
+  "screenshots": [],
+  "icons": [
     {
       "src": "/assets/Logo.b0eb28f0.png",
       "type": "image/png",
@@ -28,5 +24,6 @@
       "type": "image/x-icon"
     }
   ],
-  "shortcuts": []
+  "shortcuts": [],
+  "lang": "fr"
 }
