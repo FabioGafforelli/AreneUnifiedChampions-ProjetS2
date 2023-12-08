@@ -16,7 +16,7 @@
           <div class="flex h-12 overflow-hidden rounded-2xl text-white">
             <p class="font-museomoderno -mt-2 border-[1px] bg-blue-700 px-6 py-3 leading-5">Description</p>
             <input
-              class="font-museomoderno w-full border-2 bg-white p-5"
+              class="font-museomoderno w-full border-2 bg-white text-blue-700 p-5"
               type="text"
               placeholder="Description du jeu"
               v-model="jeux.description"
